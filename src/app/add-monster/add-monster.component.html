@@ -1,0 +1,24 @@
+<div class="form">
+    <h1>Add Monster!</h1>
+    <form [formGroup]="form"  (submit)="addClick()">
+        <div class="form-element">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" placeholder="Enter name" formControlName="name">
+            <div *ngIf="form.controls['name'].invalid && form.controls['name'].touched" class="alert alert-danger">Name is mandatory</div>
+        </div>
+        <div class="form-element">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" placeholder="Enter email" formControlName="email">
+            <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched" class="alert alert-danger">Enter valid email</div>
+            <!-- <div *ngIf="form.controls['email'].hasError('pattern')" class="alert alert-danger">Invalid Email</div> -->
+        </div>
+        <div class="form-element">
+            <label for="phone">Phone</label>
+            <input type="number" class="form-control" placeholder="Enter phone number" formControlName="phone">
+            <div  *ngIf="form.controls['phone'].invalid && form.controls['phone'].touched" class="alert alert-danger">Enter valid phone</div>
+            
+            <!-- <div *ngIf="form.controls['phone'].hasError('pattern')" class="alert alert-danger">Invalid Phone number</div> -->
+        </div>
+        <input type="submit" value="Add" class="button">
+    </form>
+</div>

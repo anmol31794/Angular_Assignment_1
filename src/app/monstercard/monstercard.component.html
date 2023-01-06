@@ -1,0 +1,7 @@
+<div  type="button" id="container" class="card" (click)="onCardClick()">
+  <img [src]="'https://robohash.org/' + monsterDetail.id + '?set=set2&size=180x180'" class="card-img-top" alt="Fissure in Sandstone"/>
+  <div class="card-body">
+    <h2 class="card-title" [innerHTML]="monsterDetail.name"></h2>
+    <h4 class="card-text" [innerHTML]="monsterDetail.email"></h4>
+  </div>
+</div>

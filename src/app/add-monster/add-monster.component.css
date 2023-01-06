@@ -1,0 +1,26 @@
+.form{text-align: center; width: 500px;margin: auto;}
+.form-element{margin-bottom: 10px;}
+.form-control{
+    border: 1px solid black;
+    font-size: 14px;
+    color: black;
+    width: 100%;
+    padding: 10px;
+}
+.alert{
+    color: red;
+    text-align: left;
+}
+label{
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.button{
+    background-color: beige;
+    border: black 1px solid;
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+    width: 100%;
+}

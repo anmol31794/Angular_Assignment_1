@@ -1,0 +1,12 @@
+<div id="container">
+    <h1>Monsters Rolodex</h1>
+    <div *ngIf="isLoading | async">Loading data. . .</div>
+    <strong *ngIf="hasError">Something went wrong</strong>
+    <input *ngIf="!hasError && monstersList.length" type="text" [(ngModel)]="searchField" (ngModelChange)="filterList()" placeholder="search. . .">
+    <div id="grid" class="grid-container row">
+        <ng-container *ngFor="let x of monstersList | filterMonsters : searched; let i = index">
+            <app-monstercard [monsterDetail]="x" class="col"></app-monstercard>
+        </ng-container>
+    </div>
+    <button class="button" (click)="onFloatClick()">Add</button>
+</div>
